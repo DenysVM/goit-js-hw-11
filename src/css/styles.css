@@ -1,0 +1,156 @@
+body {
+  background-color: #f5f5f5;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+.list {
+  list-style-type: none;
+}
+
+.load-more.is-hidden {
+  display: none;
+}
+
+.search-form {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+  border-bottom: 2px solid #ccc;
+}
+
+.search-form input {
+  width: 400px;
+  height: 40px;
+  font-size: 18px;
+  padding: 0 10px;
+  border: none;
+  border-radius: 20px;
+  outline: none;
+  border: 2px solid #ccc;
+  transition: border-color 0.2s ease;
+}
+
+.search-form input:focus {
+  border-color: #4e4e4e;
+}
+
+.search-form button:hover {
+  background-color: #666;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.search-form button {
+  cursor: pointer;
+  background-color: #4e4e4e;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  margin-left: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.2s ease, transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.gallery {
+  margin-top: 60px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.photo-card {
+  width: 100%;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.photo-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px 8px 0 0;
+}
+
+.info {
+  display: flex;
+  gap: 8px;
+  padding: 8px 4px;
+  background-color: #f5f5f5;
+  justify-content: space-between;
+}
+
+.info-item {
+  font-size: 14px;
+  text-align: center;
+  color: #666;
+}
+
+.link-lightbox {
+  min-width: 295px;
+  width: calc((100% - 60px) / 4);
+  text-decoration: none;
+}
+
+.link-lightbox:hover,
+.link-lightbox:focus {
+  cursor: zoom-in;
+  transform: scale(1.03);
+}
+
+.load-more {
+  width: 200px;
+  margin: 20px auto;
+  padding: 10px;
+  background-color: #4e4e4e;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  display: block;
+
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.2s ease, transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.load-more:hover {
+  background-color: #666;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+@media (min-width: 1200px) {
+  .gallery {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 1199px) and (min-width: 900px) {
+  .gallery {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 899px) and (min-width: 600px) {
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 599px) {
+  .gallery {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
